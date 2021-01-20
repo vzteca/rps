@@ -99,12 +99,22 @@
       //   return winner(playerScore, computerScore);
       // }
 
-      function game() {}
+      function game(playerSelection) {
+        let computerSelection = computerPlay();
+      }
+
+      const container = document.querySelector(".container");
+      const results = document.createElement("div");
+      results.classList.add("results");
+      results.textContent = "test";
+      container.appendChild(results);
 
       const btnA = document.querySelector("#btn1");
-      btnA.addEventListener("click", function (e) {
-        console.log(e);
-      });
+      btnA.addEventListener("click", game(rock));
+      const btnB = document.querySelector("#btn2");
+      btnB.addEventListener("click", game(paper));
+      const btnC = document.querySelector("#btn3");
+      btnC.addEventListener("click", game(scissors));
     </script>
   </body>
 </html>
